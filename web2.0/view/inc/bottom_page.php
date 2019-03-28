@@ -21,6 +21,7 @@
 		<script type="text/javascript" src="view/assets/js/jqwidgets/jqwidgets/jqxlistbox.js"></script>
 		<script type="text/javascript" src="view/assets/js/jqwidgets/jqwidgets/jqxdropdownlist.js"></script>
 		<script type="text/javascript" src="view/assets/js/jqwidgets/jqwidgets/jqxdatatable.js"></script>
+		
 
 				<!--validate login-->
 				<script type="text/javascript" src="view/assets/js/ini.js" ></script>

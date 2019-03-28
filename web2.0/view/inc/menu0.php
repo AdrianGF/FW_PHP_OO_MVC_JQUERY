@@ -6,7 +6,9 @@
 				</div>
 				<div class="bottom_menu_stuff">
 					<div id="login_header">
-						<a id="login" href="index.php?page=controller_login&op=logout" ><i class='fa fa-sign-out'></i>Logout</a>
+						<a id="login" href="index.php?page=controller_login&op=logout" ><i class='fa fa-sign-out'></i> Logout</a>
+					
+						<a id="edit" href="index.php?module=profile&view=main_profile"><i class='fa fa-user'></i> Mi perfil</a>
 					</div>
 				</div>
 				<ul class="links">
@@ -16,5 +18,6 @@
 					<li><a href="index.php?page=controller_contact" data-tr="CONTACTO"></a></li>
 					<li><a href="index.php?page=controller_shop&op=list_shop" data-tr="SHOP"></a></li>
 					<li><a href="index.php?page=elements" data-tr="ELEMENTOS"></a></li>
+
 				</ul>
 

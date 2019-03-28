@@ -1,19 +1,24 @@
 <?php
     $path = $_SERVER['DOCUMENT_ROOT'] . '/framework/FW_PHP_OO_MVC_JQUERY/web2.0/';
     include($path . "model/functions.php");
-    
-    if ((isset($_GET['page'])) && ($_GET['page']==="controller_pro")){
-		include("view/inc/top_page_pro.php");
-	}else{
-        if ((isset($_GET['page'])) && ($_GET['page']==="controller_contact")){
-            include("view/inc/top_page_contact.php");
+
+        if ((isset($_GET['page'])) && ($_GET['page']==="controller_pro")){
+            include("view/inc/top_page_pro.php");
         }else{
-            include("view/inc/top_page.php");
+            if ((isset($_GET['page'])) && ($_GET['page']==="controller_contact")){
+                include("view/inc/top_page_contact.php");
+            }else{
+                if ((isset($_GET['view'])) && ($_GET['view']==="main_profile")){
+                    include("view/inc/top_page_profile.html");
+                }else{
+                    include("view/inc/top_page.php");
+                }
+            }
         }
-    }
+    
 
     
-    if ((isset($_GET['page'])) && ($_GET['page']==="controller_pro") || ($_GET['page']==="controller_like") || ($_GET['page']==="controller_contact")){
+    if ((isset($_GET['page'])) && ($_GET['page']==="controller_pro") || ($_GET['page']==="controller_like") || ($_GET['page']==="controller_contact") || ($_GET['view']==="main_profile")){
 		include("view/inc/banner2.php");
 	}else{
 		include("view/inc/banner.php");
@@ -52,7 +57,16 @@
     </nav>
     <div id="">
         <?php 
-            include("view/inc/pages.php"); 
+
+            if (!isset($_GET['module'])){
+                include("view/inc/pages.php");  
+            } else if((isset($_GET['module'])) && (!isset($_GET['view']))){
+                require_once("module/".$_GET['module']."/controller/controller_" .$_GET['module']. ".class.php");
+            }
+            
+            if ( (isset($_GET['module'])) && (isset($_GET['view'])) ){
+                require_once("module/".$_GET['module']."/view/".$_GET['view'].".html");
+            }
         ?>        
         <br style="clear:both;" />
     </div>

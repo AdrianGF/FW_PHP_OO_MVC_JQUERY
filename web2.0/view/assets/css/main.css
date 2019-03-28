@@ -4520,6 +4520,8 @@ input#ProPrice.ProPrice {
 	display: inline-block;
 }
 
+
+
 .text_logo {
 	color: #FFF;
 }
@@ -4713,6 +4715,14 @@ img.shop_img {
 	color: rgba(255, 255, 255, 1);
 }
 
+#edit {
+	margin-left: 10px;
+	background-color: transparent;
+	height: 25px;
+	text-decoration: none;
+	color: rgba(255, 255, 255, 1);
+}
+
 
 #login .fa-sign-in {
 	color: rgba(255, 255, 255, 1);
@@ -4856,4 +4866,15 @@ img.shop_img {
 	background-color: #33b5e5!important;
 	color: black !important;
 	font-family: sans-serif !important;
+}
+
+.from_profile {
+	width: 60%;
+	display: inline-block;
+}
+
+#profile_test {
+	display: inline-block;
+	width: 100%;
+	height: auto;
 }

@@ -25,6 +25,7 @@
 			case "controller_cart";
 				include("module/cart/controller/".$_GET['page'].".php");
 			break;
+
 			case "elements";
 				include($_GET['page'].".html");
 				break;
