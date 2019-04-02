@@ -11,7 +11,15 @@
                 if ((isset($_GET['view'])) && ($_GET['view']==="main_profile")){
                     include("view/inc/top_page_profile.html");
                 }else{
-                    include("view/inc/top_page.php");
+                    if ((isset($_GET['view'])) && ($_GET['view']==="main_home")){
+                        include("view/inc/top_page_home.html");
+                    }else{
+                        if ((isset($_GET['view'])) && ($_GET['view']==="main_shop")){
+                            include("view/inc/top_page_shop.html");
+                        }else{
+                            include("view/inc/top_page.php");
+                        }
+                    }
                 }
             }
         }
@@ -77,5 +85,9 @@
     </div>
 </div>
 <?php
-    include("view/inc/bottom_page.php");
+    if ((isset($_GET['view'])) && ($_GET['view']==="main_shop")){
+        include("view/inc/bottom_page_shop.html");
+    }else{
+        include("view/inc/bottom_page.php");
+    }
 ?>

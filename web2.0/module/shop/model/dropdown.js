@@ -80,7 +80,7 @@ $(document).ready(function () {
                     data: dataString,
                     success: function(data) {
                         $('.btn_dd').on('click', function(){
-                            window.location.href = 'index.php?page=controller_shop&op=list_shop&ProType=' + ProType;
+                            window.location.href = 'index.php?module=shop&view=main_shop&ProType=' + ProType;
                         });
                     }
                 });

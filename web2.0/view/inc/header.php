@@ -1,6 +1,6 @@
 
 				<div class="logo">
-					<a href="index.php"> Unlimty <span>Projects</span></a>
+					<a href="index.php?module=home&view=main_home"> Unlimty <span>Projects</span></a>
 				</div>
 				<div id="idioma">
 						<button id="btn-es"></button>
